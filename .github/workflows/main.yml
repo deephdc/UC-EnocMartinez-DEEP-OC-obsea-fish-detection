@@ -36,7 +36,7 @@ jobs:
           # YOU SHOULD UPDATE THIS LINE
           #########################################################
 
-          UPSTREAM_REPO=https://github.com/deephdc/UC-EnocMartinez-DEEP-OC-obsea_fish_detector.git
+          UPSTREAM_REPO=https://github.com/EnocMartinez/obsea-fish-detection.git
 
           #########################################################
 
