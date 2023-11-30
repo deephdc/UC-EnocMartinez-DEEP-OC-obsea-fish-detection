@@ -24,9 +24,12 @@ LABEL version='0.0.1'
 # Download model from provisional server
 
 RUN mkdir -p /srv/yolov8_api/models/yolov8_obsea_xlarge/weights && \
-    curl --insecure \
-    http://testfiles.obsea.es/files/other/ai-models/obsea-fish-detection/v0.0.1/12sp_1537img_xlarge_lr_0_000375_1920_best.pt \
-    --output /srv/yolov8_api/models/yolov8_obsea_xlarge/weights/best.pt
+    curl -L https://github.com/EnocMartinez/obsea-fish-detection/releases/download/model/12sp_1537img_xlarge_lr_0_000375_1920_best.pt \
+    --output /srv/yolov8_api/models/yolov8_obsea_xlarge/weights/best.pt && \
+    mkdir -p /srv/yolov8_api/models/yolov8_obsea_nano/weights && \
+    curl -L https://github.com/EnocMartinez/obsea-fish-detection/releases/download/model/12sp_1537img_nano_lr_0_000375_1920_best.pt \
+    --output /srv/yolov8_api/models/yolov8_obsea_nano/weights/best.pt
+
 
 
 # You can use the following as "reference" - https://github.com/deephdc/DEEP-OC-phytoplankton-classification-tf/blob/master/Dockerfile
