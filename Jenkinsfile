@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        dockerhub_repo = "deephdc/uc-enocmartinez-deep-oc-obsea_fish_detector"
+        dockerhub_repo = "deephdc/uc-enocmartinez-deep-oc-obsea-fish-detection"
         base_cpu_tag = "cpu"
         base_gpu_tag = "gpu"
     }
@@ -104,19 +104,5 @@ pipeline {
             }
         }
 
-        stage("Render metadata on the marketplace") {
-            when {
-                allOf {
-                    branch 'master'
-                    changeset 'metadata.json'
-                }
-            }
-            steps {
-                script {
-                    def job_result = JenkinsBuildJob("Pipeline-as-code/deephdc.github.io/pelican")
-                    job_result_url = job_result.absoluteUrl
-                }
-            }
-        }
     }
 }
