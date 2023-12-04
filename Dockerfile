@@ -23,6 +23,10 @@ LABEL version='0.0.1'
 # Download new model weights and remove old ones
 # Download model from provisional server
 
+
+ENV YOLOV8_DEFAULT_WEIGHTS="yolov8_obsea_nano,yolov8_obsea_xlarge"
+ENV YOLOV8_DEFAULT_TASK_TYPE="det"
+
 RUN mkdir -p /srv/yolov8_api/models/yolov8_obsea_xlarge/weights && \
     curl -L https://github.com/EnocMartinez/obsea-fish-detection/releases/download/model/12sp_1537img_xlarge_lr_0_000375_1920_best.pt \
     --output /srv/yolov8_api/models/yolov8_obsea_xlarge/weights/best.pt && \
