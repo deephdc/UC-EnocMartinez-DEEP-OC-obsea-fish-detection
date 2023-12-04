@@ -29,7 +29,7 @@ If you want to build the container directly in your machine (because you want to
 git clone https://github.com/EnocMartinez/obsea_fish_detection
 cd obsea_fish_detection
 docker build -t deephdc/uc-enocmartinez-deep-oc-obsea_fish_detection .
-docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/uc-enocmartinez-deep-oc-obsea_fish_detector
+docker run -ti -p 5000:5000 -p 6006:6006 -p 8888:8888 deephdc/uc-enocmartinez-deep-oc-obsea_fish_detection
 ```
 
 These three steps will download the repository from GitHub and will build the Docker container locally on your machine. You can inspect and modify the `Dockerfile` in order to check what is going on. For instance, you can pass the `--debug=True` flag to the `deepaas-run` command, in order to enable the debug mode.
