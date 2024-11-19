@@ -1,0 +1,52 @@
+metadata_version: 2.0.0
+title: OBSEA Fish Detection
+summary: AI-based fish detection and classification algorithm based on YOLOv8. The model has been finetuned to detect and classify fish at the OBSEA underwater observatory.
+description: |-
+  Provided by UPC, EMSO, and iMagine.
+
+  This module helps users that want to train a deep learning object detection/classification algorithm (YOLOv8) with citizen fish data.
+  It was developed with the intent to automatically detect and classify fish at [OBSEA Underwater Observatory](https://obsea.es), allowing the automatic 
+  generation of biodiversity time-series. Currently it is able to detect and classify fish from the following species: Chromis chromis, 
+  Coris julis, Dentex dentex, Diplodus cervinus, Diplodus puntazzo Diplodus sargus, Diplodus vulgaris, Epinephelus costae, 
+  Epinephelus marginatus, Mullus surmuletus, Muraena helena, Parablennius gattorugine, Sarpa salpa, Seriola dumerili, Serranus cabrilla, 
+  Sparus aurata, Symphodus mediterraneus, Aetomylaeus bovinus, Oblada melanurus 
+  
+  The user can:
+  - Detect/classify fish in pictures/videos using the built-in model 
+  - Train with custom data
+
+  This module is mainly based on this already [existing module](https://github.com/ai4os-hub/ai4os-yolov8-torch)
+
+  You can find more information on YOLOv8 here:
+  * https://github.com/ultralytics/ultralytics
+  * https://docs.ultralytics.com
+
+
+dates:
+  created: '2023-11-29'
+  updated: '2024-11-19'
+links:
+  source_code: https://github.com/ai4os-hub/obsea-fish-detection/
+  docker_image: ai4oshub/obsea-fish-detection
+  dataset: https://doi.org/10.5281/zenodo.13903520
+  ai4_template: ai4-template/1.9.9
+tags:
+  - deep learning
+  - object detection
+  - classification
+  - vo.imagine-ai.eu
+tasks:
+  - Computer Vision
+  - Classification
+  - Object detection
+  - Other
+categories:
+  - AI4 pre trained
+  - AI4 trainable
+  - AI4 inference
+libraries:
+  - PyTorch
+data-type:
+  - Image
+  - Video
+  - Other
